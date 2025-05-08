@@ -17,7 +17,7 @@ public class NaiveBayesClassifier {
             };
 
             // Model output directory
-            File modelDir = new File("models");
+            File modelDir = new File("Models");
             if (!modelDir.exists()) {
                 modelDir.mkdirs();
             }

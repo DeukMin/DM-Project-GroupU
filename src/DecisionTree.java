@@ -16,12 +16,12 @@ public class DecisionTree {
         try {
 
             String[] datasetPaths = {
-                    "dataset/nursery_case0.arff",  // All attributes
-                    "dataset/nursery_case1.arff"   // Selected attributes
+                    "Datasets/nursery_case0.arff",  // All attributes
+                    "Datasets/nursery_case1.arff"   // Selected attributes
             };
 
             // Model output directory
-            File modelDir = new File("models");
+            File modelDir = new File("Models");
             if (!modelDir.exists()) {
                 modelDir.mkdirs();
             }
@@ -47,7 +47,7 @@ public class DecisionTree {
 
                 // 3. Build and save model
                 tree.buildClassifier(dataset);
-                String modelPath = "models/DecisionTree_" + (i+1) + ".model";
+                String modelPath = "Models/DecisionTree_" + (i+1) + ".model";
                 weka.core.SerializationHelper.write(modelPath, tree);
 
                 // 4. Load model
