@@ -55,11 +55,6 @@ public class NaiveBayesClassifier {
                 System.out.println(eval.toSummaryString("\n=== Evaluation Results ===\n", false));
                 System.out.println("Runtime (seconds): " + runtimeSeconds);
                 System.out.println("AUC = " + eval.areaUnderROC(1));  // Using class index 1
-                System.out.println("Kappa = " + eval.kappa());
-                System.out.println("MAE = " + eval.meanAbsoluteError());
-                System.out.println("RMSE = " + eval.rootMeanSquaredError());
-                System.out.println("RAE = " + eval.relativeAbsoluteError());
-                System.out.println("RRSE = " + eval.rootRelativeSquaredError());
                 System.out.println("fMeasure = " + eval.fMeasure(0));
                 System.out.println("Error Rate = " + eval.errorRate());
                 System.out.println(eval.toClassDetailsString("\n=== Detailed Accuracy By Class ===\n"));
